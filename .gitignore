@@ -1,0 +1,28 @@
+# 密钥与凭据（务必不要提交）
+.env
+.env.*
+*.key
+*credentials*
+*secret*
+config.local.*
+*_key.txt
+*账号*.txt
+*密码*.txt
+
+# 本地数据与结果
+data/
+output/
+*.xlsx
+*.csv
+!docs/**/*.md
+
+# 依赖
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 系统
+.DS_Store
+Thumbs.db
