@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>知识库 · 控制面板</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:#f6f8fb;color:#0f172a;font-size:14px;line-height:1.65}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+header{background:#0f172a;color:#e2e8f0;padding:26px 0 22px;margin-bottom:24px}
+header h1{font-size:21px;color:#fff;font-weight:500}
+header p{color:#94a3b8;font-size:13px;margin-top:5px}
+h2{font-size:15px;font-weight:500;margin:26px 0 12px;display:flex;align-items:center;gap:8px}
+h2:before{content:"";width:4px;height:15px;background:#2563eb;border-radius:2px}
+.ask{background:#fff;border:1px solid #e6ebf2;border-radius:12px;padding:14px 16px;margin-bottom:6px}
+.ask label{font-size:12.5px;color:#64748b;display:block;margin-bottom:6px}
+.ask input{width:100%;padding:9px 12px;border:1px solid #d8e0ea;border-radius:8px;font-size:13.5px;
+  font-family:inherit;outline:none}
+.ask input:focus{border-color:#2563eb}
+.grid{display:grid;gap:11px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:#fff;border:1px solid #e6ebf2;border-radius:11px;padding:13px 15px;
+  display:flex;flex-direction:column;gap:9px}
+.card.warn{border-color:#f0c9a0;background:#fffaf4}
+.card .tn{font-size:13.5px;font-weight:500}
+.card .td{font-size:12.5px;color:#64748b;flex:1}
+button{border:none;background:#2563eb;color:#fff;padding:7px 16px;border-radius:7px;
+  font-size:13px;font-family:inherit;cursor:pointer;align-self:flex-start}
+button:hover{background:#1d4ed8}
+.card.warn button{background:#d97706}
+.card.warn button:hover{background:#b45309}
+button.ghost{background:#eef2f7;color:#475569}
+button.ghost:hover{background:#e2e8f0}
+.job{background:#fff;border:1px solid #e6ebf2;border-radius:10px;padding:10px 14px;margin-bottom:8px}
+.job.running{border-color:#93c5fd}
+.job.failed{border-color:#fca5a5}
+.job summary{cursor:pointer;font-size:13px;font-weight:500;list-style:none}
+.job summary::-webkit-details-marker{display:none}
+.job summary:before{content:"▸";color:#94a3b8;margin-right:7px;display:inline-block;transition:transform .15s}
+.job[open] summary:before{transform:rotate(90deg)}
+.job.failed summary{color:#b91c1c}
+.job pre{margin-top:9px;background:#0f172a;color:#cbd5e1;border-radius:8px;padding:11px 13px;
+  font-size:12px;line-height:1.55;font-family:Consolas,Monaco,monospace;
+  max-height:420px;overflow:auto;white-space:pre-wrap;word-break:break-all}
+.empty{color:#94a3b8;font-size:13px;padding:10px 2px}
+footer{color:#94a3b8;font-size:12.5px;padding:26px 0 44px;text-align:center}
+.badge{font-size:11.5px;padding:1px 8px;border-radius:20px;background:#eef2f7;color:#475569;margin-left:6px}
+.badge.running{background:#dbeafe;color:#1d4ed8}
+.badge.done{background:#dcfce7;color:#15803d}
+.badge.failed{background:#fee2e2;color:#b91c1c}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>企业知识库 · 控制面板</h1>
+  <p>点按钮就能干活　|　所有资料只在本机处理，不上传任何地方</p>
+</div></header>
+
+<div class="wrap">
+
+  <div class="ask">
+    <label>下面这个是「知识库问答」要用的问题（可以先改，再点问答按钮）</label>
+    <input id="question" value="球阀的工作压力和温度范围是多少？适用哪些标准？">
+  </div>
+
+  <h2>可执行的操作</h2>
+  <div class="grid" id="tasks"><div class="empty">正在加载…</div></div>
+
+  <h2>运行日志
+    <button class="ghost" id="clear" style="margin-left:auto;font-size:12px;padding:4px 12px">清空</button>
+  </h2>
+  <div id="jobs"><div class="empty">还没有运行任何任务。点上面的按钮试试。</div></div>
+
+  <footer>关掉启动时那个黑色窗口，这个服务就停止了。</footer>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+let tasks = {};
+
+function esc(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+async function loadTasks() {
+  try {
+    tasks = await (await fetch('/api/tasks')).json();
+  } catch (e) {
+    $('#tasks').innerHTML = '<div class="empty">无法连接服务，请确认黑色窗口还开着。</div>';
+    return;
+  }
+  $('#tasks').innerHTML = Object.entries(tasks).map(([id, t]) =>
+    `<div class="card${t.warn ? ' warn' : ''}">
+       <div class="tn">${esc(t.name)}</div>
+       <div class="td">${esc(t.desc)}</div>
+       <button data-id="${id}">运行</button>
+     </div>`).join('');
+}
+
+async function run(id) {
+  const body = { task: id };
+  if (tasks[id] && tasks[id].input) body.question = $('#question').value;
+  try {
+    const r = await (await fetch('/api/run', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    })).json();
+    if (r.error) alert('出错了：' + r.error);
+    if (r.note) alert(r.note);
+  } catch (e) {
+    alert('无法连接服务，请确认黑色窗口还开着。');
+  }
+  poll();
+}
+
+const STATE = { running: '运行中', done: '完成', failed: '失败' };
+
+async function poll() {
+  let jobs;
+  try {
+    jobs = await (await fetch('/api/jobs')).json();
+  } catch (e) { return; }
+
+  // 按开始时间正序：老的在上，新的往下追加
+  const ids = Object.keys(jobs).sort((a, b) => (jobs[a].started || 0) - (jobs[b].started || 0));
+
+  if (!ids.length) {
+    if ($('#jobs').querySelector('.job')) {
+      $('#jobs').innerHTML = '<div class="empty">还没有运行任何任务。点上面的按钮试试。</div>';
+    }
+    return;
+  }
+  const hint = $('#jobs').querySelector('.empty');
+  if (hint) hint.remove();
+
+  for (const id of ids) {
+    const j = jobs[id];
+    let el = document.getElementById('job-' + id);
+
+    if (!el) {
+      // 第一次见到这个任务：建一块卡片，**默认展开**
+      el = document.createElement('details');
+      el.id = 'job-' + id;
+      el.className = 'job ' + j.status;
+      el.open = true;
+      el.innerHTML = '<summary></summary><pre></pre>';
+      $('#jobs').appendChild(el);
+      setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
+    }
+
+    // ⚠️ 关键：只更新里面的文字，**不重建卡片** ——
+    // 这样卡片的"展开/收起"完全由你控制，不会被刷新冲掉，也不会跑完自动收起。
+    el.className = 'job ' + j.status;
+    el.querySelector('summary').innerHTML =
+      esc(j.name || j.task) +
+      '<span class="badge ' + j.status + '">' + (STATE[j.status] || j.status) + '</span>';
+
+    const pre = el.querySelector('pre');
+    const txt = j.out || '（等待输出…）';
+    if (pre.textContent !== txt) {
+      // 只有你本来就贴着底部时才自动滚到底，不打断你往上翻看
+      const atBottom = pre.scrollHeight - pre.scrollTop - pre.clientHeight < 30;
+      pre.textContent = txt;
+      if (atBottom) pre.scrollTop = pre.scrollHeight;
+    }
+  }
+}
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('#tasks button');
+  if (b) run(b.dataset.id);
+});
+
+$('#clear').addEventListener('click', async () => {
+  await fetch('/api/clear', { method: 'POST' });
+  $('#jobs').innerHTML = '<div class="empty">还没有运行任何任务。点上面的按钮试试。</div>';
+});
+
+loadTasks();
+poll();
+setInterval(poll, 1500);
+</script>
+</body>
+</html>

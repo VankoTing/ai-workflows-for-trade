@@ -1,0 +1,20 @@
+{"id": "P01", "cat": "product", "q": "GKV522 系列是什么类型的阀门？", "keys": ["止回阀"], "files": ["产品资料/<产品手册>.pdf"], "role": "gm"}
+{"id": "P02", "cat": "product", "q": "GKV326 闸阀符合什么设计标准？", "keys": ["API 603"], "files": ["产品资料/<产品手册>.pdf"], "role": "gm"}
+{"id": "P03", "cat": "product", "q": "GKV225 球阀的压力等级是多少？", "keys": ["PN16"], "files": ["产品资料/<产品手册>.pdf"], "role": "gm"}
+{"id": "P04", "cat": "product", "q": "GKV128 仪表球阀的工作压力和温度范围是多少？", "keys": ["3000", "180"], "files": ["产品资料/<产品手册>.pdf"], "role": "gm"}
+{"id": "P05", "cat": "product", "q": "GKV412 是球阀还是截止阀？", "keys": ["截止阀"], "files": [], "role": "gm"}
+{"id": "P06", "cat": "product", "q": "GKP110DA 是什么产品？", "keys": ["执行器"], "files": [], "role": "gm"}
+{"id": "P07", "cat": "product", "q": "GKV326 闸阀的阀体材质有哪些选项？", "keys": ["CF8M"], "files": ["产品资料/<产品手册>.pdf"], "role": "gm"}
+{"id": "P08", "cat": "product", "q": "GKV125 是什么结构形式的球阀？", "keys": ["两片", "2 piece", "二片"], "files": [], "role": "gm"}
+{"id": "P09", "cat": "product", "q": "刀闸阀里 GKVT 是哪一种？", "keys": ["穿通"], "files": ["产品资料/<产品手册>.pdf"], "role": "gm"}
+{"id": "P10", "cat": "product", "q": "GKV225 系列球阀的口径范围是多少？", "keys": ["DN15"], "files": ["产品资料/<产品手册>.pdf"], "role": "gm"}
+{"id": "P11", "cat": "product", "q": "SN250912106833 询价单里涉及哪些阀门？", "keys": [], "files": [], "role": "gm"}
+{"id": "P12", "cat": "product", "q": "产品资料里有关于 PFA 内衬球阀的内容吗？", "keys": ["PFA"], "files": ["产品资料/<产品手册>.pdf"], "role": "gm"}
+{"id": "R01", "cat": "price", "q": "GKV125-1英寸800磅球阀的某地区报价单价是多少？", "keys": ["28.5"], "files": ["报价单/20251103-某地区/<报价表>.xlsx"], "role": "manager"}
+{"id": "R02", "cat": "price", "q": "GKV522A-14英寸300磅的阀门报过什么价格？", "keys": ["25020"], "files": ["报价单/0390035-业务员/<报价表>.xlsx"], "role": "manager"}
+{"id": "R03", "cat": "price", "q": "某地区和某地区的报价对比表里，同一个型号哪个更便宜？", "keys": ["某地区"], "files": ["报价单/20251103-某地区/<报价表>.xlsx"], "role": "manager"}
+{"id": "R04", "cat": "price", "q": "某地区发电厂项目的阀门报价涉及哪些型号？", "keys": ["GKV412"], "files": [], "role": "manager"}
+{"id": "R05", "cat": "price", "q": "某地区投标材料里有没有财务相关文件？", "keys": ["财务"], "files": [], "role": "gm"}
+{"id": "G01", "cat": "general", "q": "公司的产品目录里包含哪些阀门类型？", "keys": ["球阀"], "files": [], "role": "gm"}
+{"id": "G02", "cat": "general", "q": "公司有哪些国际项目的参考业绩清单？", "keys": ["REFERENCE LIST"], "files": [], "role": "gm"}
+{"id": "G03", "cat": "general", "q": "产品宣传册里提到的工作温度范围一般是多少？", "keys": ["180"], "files": [], "role": "gm"}

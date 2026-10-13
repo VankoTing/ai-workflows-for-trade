@@ -1,0 +1,63 @@
+# ============================================================
+#  ⚠️ 铁律：本仓库只放代码，绝不提交公司资料 / 密钥 / 向量库
+#     资料位置：本地资料目录  —— 永远不要复制进本项目
+# ============================================================
+
+# --- 公司资料（绝对禁止入库）---
+data/
+!data/README.md
+*.pdf
+*.xls
+*.xlsx
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.csv
+*.mp4
+*.mov
+
+# --- 向量库 / 中间产物 ---
+chroma/
+*.sqlite3
+*.db
+vectors/
+processed/
+cache/
+
+# --- 生成产物（含未脱敏内容，禁止入库）---
+dashboard/
+panel/*.log
+*_backup/
+
+# --- 一次性临时文件 ---
+_*.txt
+_*.log
+*.tmp
+
+# --- 配置与密钥 ---
+config.yaml
+.env
+.env.*
+*.key
+*credentials*
+*secret*
+*账号*
+*密码*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# --- 系统 / 编辑器 ---
+.DS_Store
+Thumbs.db
+
+# --- 编辑器本地配置 ---
+.vscode/
+
+# --- 个人求职材料（不进公开仓库）---
+docs/career/
