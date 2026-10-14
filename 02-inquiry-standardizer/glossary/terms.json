@@ -1,0 +1,1134 @@
+{
+  "generated_at": "2026-10-14T14:50:36",
+  "term_count": 141,
+  "terms": [
+    {
+      "en": "2\"",
+      "zh": "2英寸 (DN50)",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "316 Stainless Steel",
+      "zh": "316不锈钢",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "4\"",
+      "zh": "4英寸 (DN100)",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "150#",
+      "zh": "Class 150",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Class 150",
+      "zh": "Class 150",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "600#",
+      "zh": "Class 600",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Class 600",
+      "zh": "Class 600",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "DN100",
+      "zh": "DN100 (4英寸)",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "DN50",
+      "zh": "DN50 (2英寸)",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Nitrile (NBR)",
+      "zh": "丁腈橡胶",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Stainless Steel",
+      "zh": "不锈钢",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "2-Pieces Shaft",
+      "zh": "两段式阀杆",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Concentric, Lined Body",
+      "zh": "中线式，衬里阀体",
+      "count": 2,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "FP",
+      "zh": "全通径",
+      "count": 9,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "FP (Full Port)",
+      "zh": "全通径",
+      "count": 4,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "FB (Full Bore)",
+      "zh": "全通径",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Nominal Pressure",
+      "zh": "公称压力",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Nominal Diameter",
+      "zh": "公称通径",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Trim",
+      "zh": "内件",
+      "count": 2,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Trim",
+      "zh": "内件材质",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Trim Material",
+      "zh": "内件材质",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Internal + external phosphated",
+      "zh": "内外表面磷化",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "RF",
+      "zh": "凸面法兰",
+      "count": 8,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "RF (Raised Face)",
+      "zh": "凸面法兰",
+      "count": 6,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "RF (Raised Face)",
+      "zh": "凸面法兰 (RF)",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "RF (Raised Face)",
+      "zh": "凸面法兰(RF)",
+      "count": 3,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Unit",
+      "zh": "单位",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Body P-T Rating",
+      "zh": "压力-温度额定",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Pressure Class",
+      "zh": "压力等级",
+      "count": 3,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Rating",
+      "zh": "压力等级",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Raw Water",
+      "zh": "原水",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Raw Water & Hydrocarbon Condensate",
+      "zh": "原水与烃类凝析液",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Double Flanged, RF",
+      "zh": "双法兰，凸面",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Double Flanged, Raised Face",
+      "zh": "双法兰，凸面",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Size (DN)",
+      "zh": "口径",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "EA",
+      "zh": "台",
+      "count": 32,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Plug Type Disc",
+      "zh": "塞型阀瓣（锥形）",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Packing",
+      "zh": "填料",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Gland Packing",
+      "zh": "填料压盖",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "REVIEW & CLARIFICATION NOTES",
+      "zh": "审查与澄清备注",
+      "count": 6,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Thermal Oil",
+      "zh": "导热油",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Working Fluid",
+      "zh": "工作介质",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Working Temperature",
+      "zh": "工作温度",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Service Condition",
+      "zh": "工况",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Service limit",
+      "zh": "工况限制",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "S/N",
+      "zh": "序号",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Spring",
+      "zh": "弹簧",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "O-Ring O",
+      "zh": "形圈",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "TBD",
+      "zh": "待定",
+      "count": 2,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Missing info",
+      "zh": "待确认信息",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Globe Valve",
+      "zh": "截止阀",
+      "count": 2,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "GLOBE VALVE INQUIRY",
+      "zh": "截止阀询价整理",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Hand lever",
+      "zh": "手柄操作",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Handle Material",
+      "zh": "手柄材质",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Handle Finish",
+      "zh": "手柄表面",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Handle Colour",
+      "zh": "手柄颜色",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Actuator",
+      "zh": "执行机构",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Thrust Washer",
+      "zh": "推力垫圈",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Devlon Devlon（James Walker",
+      "zh": "改性工程塑料）",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Req",
+      "zh": "数量",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Swing type",
+      "zh": "旋启式",
+      "count": 2,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Swing Check Valve",
+      "zh": "旋启式止回阀",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Not specified",
+      "zh": "未注明",
+      "count": 6,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Material Description",
+      "zh": "材质描述",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Check Valve",
+      "zh": "止回阀",
+      "count": 7,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Water & Hydrocarbon Condensate",
+      "zh": "水与烃类凝析液",
+      "count": 2,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Serration",
+      "zh": "水线",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Flange Std",
+      "zh": "法兰标准",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Flange Standard",
+      "zh": "法兰标准",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Flange Connection",
+      "zh": "法兰连接",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Flange Finish",
+      "zh": "法兰面",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "PTFE",
+      "zh": "涂层",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Special Requirements",
+      "zh": "特殊要求",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Ring Seat",
+      "zh": "环座（密封圈座）",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "RTJ (Ring Type Joint)",
+      "zh": "环形槽面",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "RTJ (Ring Type Joint)",
+      "zh": "环形槽面 (RTJ)",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Ball",
+      "zh": "球体",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Ball Valve",
+      "zh": "球阀",
+      "count": 13,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Application",
+      "zh": "用途",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Graphite",
+      "zh": "石墨",
+      "count": 2,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "CS",
+      "zh": "碳钢",
+      "count": 2,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Carbon Steel",
+      "zh": "碳钢",
+      "count": 2,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "CS (Carbon Steel)",
+      "zh": "碳钢",
+      "count": 2,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Carbon Steel (CS)",
+      "zh": "碳钢",
+      "count": 2,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "CS Body & Cap",
+      "zh": "碳钢 阀体与阀盖",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "CS, Lined",
+      "zh": "碳钢，衬里",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "End Connection",
+      "zh": "端部连接",
+      "count": 4,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Design & standard",
+      "zh": "结构与标准",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Design",
+      "zh": "结构型式",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Design Type",
+      "zh": "结构型式",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Construction",
+      "zh": "结构型式",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Face-to-Face (FF)",
+      "zh": "结构长度",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Face-to-Face Std",
+      "zh": "结构长度标准",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Face-to-Face Standard",
+      "zh": "结构长度标准",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Chamber Thrust Seal",
+      "zh": "腔体推力密封",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Disc",
+      "zh": "蝶板",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Disc Material",
+      "zh": "蝶板材质",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Butterfly Valve",
+      "zh": "蝶阀",
+      "count": 3,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Butterfly Valve Specifications",
+      "zh": "蝶阀技术规格",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Butterfly Valve Inquiry",
+      "zh": "蝶阀询价汇总",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Bolts",
+      "zh": "螺栓",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Threaded Ends",
+      "zh": "螺纹连接",
+      "count": 3,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "NPT Threaded NPT",
+      "zh": "螺纹连接",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Surface Treatment",
+      "zh": "表面处理",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Lining",
+      "zh": "衬里",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Liner Material",
+      "zh": "衬里材质",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Lined Body",
+      "zh": "衬里阀体",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Design Standard",
+      "zh": "设计标准",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Test Pressure",
+      "zh": "试验压力",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Inquiry",
+      "zh": "询价单",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Inquiry Date",
+      "zh": "询价日期",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Quotation Line Items",
+      "zh": "询价明细表",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Bearing",
+      "zh": "轴承",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "End Connection",
+      "zh": "连接形式",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Connection",
+      "zh": "连接方式",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Port",
+      "zh": "通径型式",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Needle Valve",
+      "zh": "针型阀",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Steel S2.3",
+      "zh": "钢 S2.3",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Silver",
+      "zh": "银色",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Serrated Finish",
+      "zh": "锯齿面",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Serrated Finish",
+      "zh": "锯齿面(水线)",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Forged CS",
+      "zh": "锻钢碳钢",
+      "count": 3,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Galvanized",
+      "zh": "镀锌",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Gate Valve",
+      "zh": "闸阀",
+      "count": 5,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Body",
+      "zh": "阀体",
+      "count": 3,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Body & Bonnet Material",
+      "zh": "阀体与阀盖材质",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Body Gasket",
+      "zh": "阀体垫片",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Body Material",
+      "zh": "阀体材质",
+      "count": 3,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Body",
+      "zh": "阀体材质",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Valve Colour",
+      "zh": "阀体颜色",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Seat",
+      "zh": "阀座",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Seat Material",
+      "zh": "阀座材质",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Seat Test Pressure",
+      "zh": "阀座试验压力",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Stem",
+      "zh": "阀杆",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Stem Material",
+      "zh": "阀杆材质",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Shaft",
+      "zh": "阀杆结构",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Stem Nut",
+      "zh": "阀杆螺母",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Disc Type",
+      "zh": "阀瓣型式",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Valve Type",
+      "zh": "阀门类型",
+      "count": 6,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "High Temperature",
+      "zh": "高温",
+      "count": 10000,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "Black",
+      "zh": "黑色",
+      "count": 1,
+      "sources": [
+        "manual"
+      ]
+    }
+  ]
+}
