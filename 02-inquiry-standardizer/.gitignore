@@ -18,6 +18,15 @@ data/input/
 # 运行产物：体积大、且含业务数据
 output/
 
+# 桌面版打包产物（PyInstaller）
+build/
+build_*/
+dist/
+dist_*/
+
+# 桌面版运行时创建的工作目录（输入 / 输出）
+工作区/
+
 # 其它可能含真实数据的中间文件
 *.tmp
 ~$*

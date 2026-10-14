@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-14T14:50:36",
-  "term_count": 141,
+  "generated_at": "2026-10-14T15:39:17",
+  "term_count": 143,
   "terms": [
     {
       "en": "2\"",
@@ -60,7 +60,23 @@
     },
     {
       "en": "DN100",
+      "zh": "DN100",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "DN100",
       "zh": "DN100 (4英寸)",
+      "count": 0,
+      "sources": [
+        "manual"
+      ]
+    },
+    {
+      "en": "DN50",
+      "zh": "DN50",
       "count": 0,
       "sources": [
         "manual"

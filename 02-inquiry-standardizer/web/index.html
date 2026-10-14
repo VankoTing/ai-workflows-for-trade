@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>阀门询价整理</title>
+<style>
+:root{
+  --bg:#f7f7f5; --card:#fff; --line:#e6e5e0;
+  --text:#1f1f1d; --muted:#6b6a65; --faint:#9a9992;
+  --blue:#185FA5; --blue-dark:#0C447C; --blue-soft:#E6F1FB; --blue-line:#B5D4F4;
+  --ok:#0F6E56; --warn:#A32D2D; --warn-soft:#FCEBEB;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+  font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:700px;margin:0 auto;padding:32px 20px 60px}
+header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:22px}
+h1{margin:0;font-size:18px;font-weight:600}
+.sub{margin:3px 0 0;font-size:12.5px;color:var(--muted)}
+.right{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--muted);flex-shrink:0;padding-top:2px}
+.dot{width:7px;height:7px;border-radius:50%;background:#B4B2A9;flex-shrink:0}
+.dot.ok{background:var(--ok);box-shadow:0 0 0 3px #E1F5EE}
+.dot.warn{background:#BA7517;box-shadow:0 0 0 3px #FAEEDA}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:14px}
+.drop{
+  border:1.5px dashed #d4d3cd;border-radius:10px;padding:34px 20px;text-align:center;
+  cursor:pointer;transition:.15s;background:#fcfcfa;
+}
+.drop:hover{border-color:var(--blue-line);background:var(--blue-soft)}
+.drop.over{border-color:var(--blue);background:var(--blue-soft)}
+.drop-icon{
+  width:38px;height:38px;border-radius:50%;background:var(--blue-soft);color:var(--blue);
+  display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:300;
+  margin:0 auto 12px;line-height:1;
+}
+.drop-main{margin:0;font-size:14px;font-weight:500}
+.drop-sub{margin:5px 0 0;font-size:12.5px;color:var(--faint)}
+.fileinfo{
+  display:flex;align-items:center;gap:10px;margin-top:12px;padding:11px 14px;
+  background:var(--blue-soft);border:1px solid var(--blue-line);border-radius:9px;
+}
+.fname{flex:1;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.field{display:block;margin-top:16px}
+.field span{display:block;font-size:12.5px;color:var(--muted);margin-bottom:6px}
+input[type=text],input[type=password]{
+  width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:9px;
+  font-size:13.5px;font-family:inherit;color:var(--text);background:#fff;outline:none;
+}
+input:focus{border-color:var(--blue-line);box-shadow:0 0 0 3px var(--blue-soft)}
+.btn-primary{
+  display:block;width:100%;margin-top:18px;padding:11px;border:0;border-radius:9px;
+  background:var(--blue);color:#fff;font-size:14px;font-weight:500;font-family:inherit;
+  cursor:pointer;text-align:center;text-decoration:none;
+}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-primary:disabled{background:#c9c8c2;cursor:not-allowed}
+.btn-ghost{
+  border:1px solid var(--line);background:#fff;color:var(--muted);font-size:12.5px;
+  padding:5px 11px;border-radius:7px;cursor:pointer;font-family:inherit;flex-shrink:0;
+}
+.btn-ghost:hover{border-color:#c9c8c2;color:var(--text)}
+.alert{
+  background:var(--warn-soft);border:1px solid #F7C1C1;color:#501313;
+  border-radius:9px;padding:10px 13px;font-size:12.5px;margin-bottom:14px;
+}
+.progress-head{display:flex;justify-content:space-between;font-size:13px;margin-bottom:9px}
+.progress-head span:last-child{color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:6px;background:#eeede8;border-radius:3px;overflow:hidden}
+.bar-fill{height:100%;width:0;background:var(--blue);border-radius:3px;transition:width .4s ease}
+.bar-fill.indet{width:100%;animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:.9}}
+.done{border-color:#9FE1CB;background:#F7FDFA}
+.done-title{margin:0;font-size:14px;font-weight:600;color:var(--ok)}
+.done-file{margin:6px 0 0;font-size:12.5px;color:var(--muted);word-break:break-all}
+.done-actions{display:flex;gap:10px;margin-top:16px}
+.done-actions .btn-primary{margin:0;flex:1}
+.done-actions .btn-ghost{padding:11px 16px;font-size:13px}
+.modal{
+  position:fixed;inset:0;background:rgba(31,31,29,.42);
+  display:flex;align-items:center;justify-content:center;padding:20px;z-index:50;
+}
+.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:420px;width:100%}
+.modal-box h2{margin:0 0 8px;font-size:16px;font-weight:600}
+.modal-desc{margin:0 0 16px;font-size:12.5px;color:var(--muted);line-height:1.65}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+.modal-actions .btn-primary{width:auto;margin:0;padding:9px 20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>阀门询价整理</h1>
+      <p class="sub">询价文件 → 中英对照标准表 + 技术审查</p>
+    </div>
+    <div class="right">
+      <span class="dot" id="dot"></span><span id="keyState">检查中…</span>
+      <button class="btn-ghost" id="btnSetup">设置</button>
+    </div>
+  </header>
+
+  <div class="alert" id="alert" style="display:none"></div>
+
+  <div class="card">
+    <div class="drop" id="drop">
+      <div class="drop-icon">+</div>
+      <p class="drop-main">把询价文件拖到这里</p>
+      <p class="drop-sub">或点击选择 · 支持 Excel / Word / PDF / 文本</p>
+      <input type="file" id="file" hidden accept=".xlsx,.xlsm,.docx,.pdf,.txt,.md,.csv">
+    </div>
+    <div class="fileinfo" id="fileinfo" style="display:none">
+      <span class="fname" id="fname"></span>
+      <button class="btn-ghost" id="btnClear">移除</button>
+    </div>
+
+    <label class="field">
+      <span>项目编号 / 补充信息（可选）</span>
+      <input type="text" id="hint" placeholder="例如：691-2610-26，埃及项目">
+    </label>
+
+    <button class="btn-primary" id="btnRun" disabled>开始整理</button>
+  </div>
+
+  <div class="card" id="progressCard" style="display:none">
+    <div class="progress-head">
+      <span id="stageText">准备中…</span>
+      <span id="pctText">0%</span>
+    </div>
+    <div class="bar"><div class="bar-fill" id="barFill"></div></div>
+  </div>
+
+  <div class="card done" id="doneCard" style="display:none">
+    <p class="done-title">处理完成</p>
+    <p class="done-file" id="doneFile"></p>
+    <div class="done-actions">
+      <a class="btn-primary" id="btnDownload" download>下载结果</a>
+      <button class="btn-ghost" id="btnFolder">打开输出文件夹</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal" style="display:none">
+  <div class="modal-box">
+    <h2>设置 API Key</h2>
+    <p class="modal-desc">
+      需要 DeepSeek 的 API Key 才能调用 AI 整理。<br>
+      Key 只保存在这台电脑上，不会上传到任何地方。
+    </p>
+    <input type="password" id="keyInput" placeholder="sk-...">
+    <div class="modal-actions">
+      <button class="btn-ghost" id="btnCancel">取消</button>
+      <button class="btn-primary" id="btnSave">保存</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+let picked = null;
+let running = false;
+
+function showAlert(msg){
+  $('alert').style.display = 'block';
+  $('alert').textContent = msg;
+}
+function hideAlert(){ $('alert').style.display = 'none'; }
+
+async function checkKey(){
+  try{
+    const j = await (await fetch('/api/status')).json();
+    $('dot').className = 'dot ' + (j.has_key ? 'ok' : 'warn');
+    $('keyState').textContent = j.has_key ? '已就绪' : '未设置 API Key';
+    if(!j.has_key) showAlert('还没有设置 API Key。点右上角「设置」填写后才能开始处理。');
+  }catch(e){
+    $('keyState').textContent = '服务未响应';
+  }
+}
+
+$('btnSetup').onclick = () => { $('modal').style.display = 'flex'; $('keyInput').focus(); };
+$('btnCancel').onclick = () => { $('modal').style.display = 'none'; };
+$('btnSave').onclick = async () => {
+  const key = $('keyInput').value.trim();
+  if(!key) return;
+  const fd = new FormData();
+  fd.append('api_key', key);
+  const j = await (await fetch('/api/setup', {method:'POST', body: fd})).json();
+  if(j.ok){ $('modal').style.display = 'none'; $('keyInput').value=''; hideAlert(); checkKey(); }
+  else { alert(j.msg || '保存失败'); }
+};
+
+function pick(f){
+  if(!f) return;
+  picked = f;
+  $('fname').textContent = f.name;
+  $('fileinfo').style.display = 'flex';
+  $('btnRun').disabled = false;
+  $('doneCard').style.display = 'none';
+  $('progressCard').style.display = 'none';
+}
+
+$('drop').onclick = () => $('file').click();
+$('file').onchange = e => pick(e.target.files[0]);
+['dragenter','dragover'].forEach(ev =>
+  $('drop').addEventListener(ev, e => { e.preventDefault(); $('drop').classList.add('over'); }));
+['dragleave','drop'].forEach(ev =>
+  $('drop').addEventListener(ev, e => { e.preventDefault(); $('drop').classList.remove('over'); }));
+$('drop').addEventListener('drop', e => { if(e.dataTransfer.files[0]) pick(e.dataTransfer.files[0]); });
+$('btnClear').onclick = () => {
+  picked = null; $('file').value = '';
+  $('fileinfo').style.display = 'none'; $('btnRun').disabled = true;
+};
+
+function setStage(text, pct){
+  $('stageText').textContent = text;
+  const fill = $('barFill');
+  if(typeof pct === 'number'){
+    fill.classList.remove('indet');
+    fill.style.width = pct + '%';
+    $('pctText').textContent = pct + '%';
+  }else{
+    fill.classList.add('indet');
+    $('pctText').textContent = '处理中';
+  }
+}
+
+function handleEvent(raw){
+  let type = '', data = '';
+  for(const line of raw.split('\n')){
+    if(line.startsWith('event:')) type = line.slice(6).trim();
+    else if(line.startsWith('data:')) data += line.slice(5).trim();
+  }
+  if(!data) return;
+  let d;
+  try{ d = JSON.parse(data); }catch(e){ return; }
+
+  if(type === 'stage'){ setStage(d.text, d.pct); }
+  else if(type === 'done'){
+    setStage(d.text, 100);
+    $('doneFile').textContent = d.file;
+    $('btnDownload').href = '/api/download/' + encodeURIComponent(d.file);
+    $('btnDownload').setAttribute('download', d.file);
+    $('doneCard').style.display = 'block';
+  }
+  else if(type === 'error'){
+    $('progressCard').style.display = 'none';
+    showAlert(d.text);
+  }
+}
+
+async function run(){
+  if(!picked || running) return;
+  running = true;
+  hideAlert();
+  $('btnRun').disabled = true;
+  $('btnRun').textContent = '处理中…';
+  $('doneCard').style.display = 'none';
+  $('progressCard').style.display = 'block';
+  setStage('正在上传文件…', 8);
+
+  const fd = new FormData();
+  fd.append('file', picked);
+  fd.append('hint', $('hint').value);
+
+  try{
+    const res = await fetch('/api/process', {method:'POST', body: fd});
+    const reader = res.body.getReader();
+    const dec = new TextDecoder();
+    let buf = '';
+    for(;;){
+      const {done, value} = await reader.read();
+      if(done) break;
+      buf += dec.decode(value, {stream:true});
+      let i;
+      while((i = buf.indexOf('\n\n')) >= 0){
+        const chunk = buf.slice(0, i);
+        buf = buf.slice(i + 2);
+        handleEvent(chunk);
+      }
+    }
+  }catch(e){
+    showAlert('连接中断：' + e.message);
+  }finally{
+    running = false;
+    $('btnRun').disabled = false;
+    $('btnRun').textContent = '开始整理';
+  }
+}
+
+$('btnRun').onclick = run;
+$('btnFolder').onclick = () => fetch('/api/open-folder', {method:'POST'});
+checkKey();
+</script>
+</body>
+</html>

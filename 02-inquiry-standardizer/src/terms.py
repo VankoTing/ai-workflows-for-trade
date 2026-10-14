@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import re
 from datetime import datetime
 from pathlib import Path
@@ -35,8 +36,12 @@ MAX_EN_LEN = 30
 
 # 术语库属于项目资产，要随代码入库，所以不放 data/ ——
 # data/ 是「本地业务数据」，约定不入库（见 .gitignore）
+#
+# 打包成 exe 后代码跑在临时解压目录里，术语库要写到 exe 同目录才留得住，
+# 因此允许用环境变量 VALVE_GLOSSARY_DIR 指定位置（见 desktop.py）。
 _ROOT = Path(__file__).resolve().parent.parent
-GLOSSARY_DIR = _ROOT / "glossary"
+_env_glossary = os.getenv("VALVE_GLOSSARY_DIR", "").strip()
+GLOSSARY_DIR = Path(_env_glossary) if _env_glossary else (_ROOT / "glossary")
 DEFAULT_PATH = GLOSSARY_DIR / "terms.json"
 EXTRA_PATH = GLOSSARY_DIR / "terms_extra.csv"
 
